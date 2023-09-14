@@ -1,0 +1,9 @@
+<!--pages/common/tip.wxml-->
+<view>
+    <wux-notice-bar
+        loop
+        trailing="1000"
+        content="{{tipContent}}"
+        style="display: {{showStatus.noticeStatus}};"
+    />
+</view>

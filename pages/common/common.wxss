@@ -1,0 +1,13 @@
+/* 通用全局样式 */
+@import "/miniprogram_npm/wux-weapp/styles/index.wxss";
+
+page {
+    min-height: 100vh;
+    z-index: 0;
+    font-size: 30rpx;
+}
+
+.body-wrap {
+    min-height: 100vh;
+    height: 100%;
+}

@@ -1,0 +1,118 @@
+/**index.wxss**/
+@import "../common/common.wxss";
+
+.preview, .sample-group{
+    display: flex;
+    /* 主轴行：一行三列 */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vw; */
+    /* border: 1px solid red; */
+}
+
+.sample-group {
+  border: none;
+  height: auto;
+  margin: 30px 0;
+}
+
+.img-group {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-item {
+    width: 60vw;
+    height: 60vw;
+    margin: 0 10px;
+    background-color: #f3f3f3;
+    /* border: 1px solid green; */
+}
+
+.img-item image {
+  width: 60vw;
+  height: 60vw;
+}
+
+.sample-group .img-item, .sample-group .img-group image {
+  width: 45vw;
+  height: 45vw;
+}
+
+.sample-group .img-group,
+.sample-group .img-item {
+  border: none;
+}
+
+.operate-btns {
+  width: 45vw;
+  height: 30px;
+  /* background-color: #f3f3f3; */
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.operate-btns button {
+  background-color: white;
+}
+
+.sample-item-desc {
+  width: 45vw;
+  height: 30px;
+  font-size: 0.8rem;
+  /* border: 0.5px solid gray; */
+}
+
+.submit-container {
+  margin: 20px 5px;
+}
+
+#prompt-input {
+  border: 1px solid grey;
+  margin: 10px 0;
+  border-radius: 5px;
+  height: 50px;
+  border-color: black;
+  padding-left: 8px;
+}
+
+.prompt-input-placeholder {
+  color: gray;
+}
+
+.submit-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#clear-btn {
+  background-color: lightgrey;
+  margin: 0 5px;
+  width: 20vw;
+}
+
+#submit-btn {
+  background-color: lightgreen;
+  margin: 0 5px;
+  width: 20vw;
+}
+
+.logs {
+  display: flex;
+  flex-direction: column;
+  height: 60vw;
+  margin: 10px;
+  background-color: #f3f3f3;
+  overflow-y: scroll;
+}
+
+.logs text {
+  font-size: 0.9rem;
+}

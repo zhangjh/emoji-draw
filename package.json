@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "dependencies": {
+    "wux-weapp": "^3.9.0"
+  }
+}

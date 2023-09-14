@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<wux-loading id="wux-loading" />
+
+<view class="body-wrap">
+  <include src="../common/tip" />
+
+  <view class="submit-container">
+    <input id="prompt-input" 
+      value="{{prompt}}"
+      placeholder-class="prompt-input-placeholder" 
+      placeholder="请输入你感兴趣的提示词，中英文均可" 
+      bindinput="bindPromptInput"/>
+    <view class="submit-btns">
+      <button id="clear-btn" bind:tap="reset">重置</button>
+      <button id="submit-btn" bind:tap="submit">提交</button>
+    </view>
+  </view>
+
+  <view class="sample" style="display: {{showStatus.sampleStatus ? 'block' : 'none'}};">
+    <view class="sample-group">
+      <view class="img-group">
+        <view class="img-item">
+          <image src="https://replicate.delivery/pbxt/J6vOuC0Yj647JRa9YAUMq1vbGKFAiOreQcKuJmHLI0wQuawIA/out-0.png" />
+        </view>
+        <view class="sample-item-desc">A TOK emoji of a tiger face, white background</view>
+      </view>
+      <view class="img-group">
+        <view class="img-item">
+          <image src="https://replicate.delivery/pbxt/a3z81v5vwlKfLq1H5uBqpVmkHalOVup0jSLma9E2UaF3tawIA/out-0.png" />
+        </view>
+        <view class="sample-item-desc">A TOK emoji of a man</view>
+      </view>
+    </view>
+    <view class="sample-group">
+      <view class="img-group">
+        <view class="img-item">
+          <image src="https://replicate.delivery/pbxt/cNFerMxyBD1UfERJB29hHCGJujf0DShhcDWcaqxlX9aUfVDGB/out-0.png" />
+        </view>
+        <view class="sample-item-desc">A TOK emoji of a llama face, white background</view>
+      </view>
+      <view class="img-group">
+        <view class="img-item">
+          <image src="https://replicate.delivery/pbxt/DKFghOgmkTKVCpwgfIeKkTqMemHQMKtW9yxLYqeLyeonHtGMC/out-0.png" />
+        </view>
+        <view class="sample-item-desc">A TOK emoji of a simple camera on a white background</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="logs" style="display: {{showStatus.logStatus ? 'block' : 'none'}};">
+    <text>{{logContent}}</text>
+  </view>
+
+  <view class="preview" style="display: {{showStatus.previewStatus ? 'block' : 'none'}};">
+    <view class="img-group">
+      <view class="img-item">
+        <image src="{{drawResult}}" />
+      </view>
+      <view class="operate-btns">
+        <button size="mini" open-type="share" data-url="{{drawResult}}">
+            <wux-icon type="md-share" size="30" color="#2c2c2c" />
+        </button>
+        <button size="mini" bind:tap="createOrder">
+          <wux-icon type="md-download" size="30" color="#2c2c2c" />
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view>
