@@ -24,8 +24,8 @@
 }
 
 .img-item {
-    /* width: 60vw;
-    height: 60vw; */
+    width: 60vw;
+    height: 60vw;
     margin: 0 10px;
     background-color: #f3f3f3;
     /* border: 1px solid green; */
