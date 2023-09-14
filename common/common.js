@@ -89,24 +89,14 @@ const getTips = function(cb) {
   });
 }
 
-const escape = function(text) {
-  const lines = text.split('\n');  
-  const nodes = [];  
-  
-  lines.forEach((line, index) => {  
-    nodes.push({ type: 'text', text: line });  
-  
-    if (index < lines.length - 1) {  
-      nodes.push({ type: 'text', text: '\n' });  
-    }  
-  });  
-  
-  return nodes;  
-}
+const isChinese = function(val) {    
+　　var reg = new RegExp("[\\u4E00-\\u9FFF]+", "g");
+　　return reg.test(val);
+};
 
 module.exports = {
   global,
   wxRequest,
   getTips,
-  escape
+  isChinese
 };

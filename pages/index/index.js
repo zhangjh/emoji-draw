@@ -39,8 +39,27 @@ Page({
       text: "绘图中,请稍等..."
     });
     let prompt = this.data.prompt;
-    if(!this.data.prompt.toUpperCase().startsWith("A TOK")) {
-      prompt = "A TOK emoji of " + this.data.prompt;
+    // 中文先翻译
+    if(common.isChinese(this.data.prompt)) {
+      common.wxRequest({
+        url: "https://wx.zhangjh.me/baidu",
+        method: "POST",
+        data: {
+          text: this.data.prompt,
+          from: "zh",
+          to: "en"
+        },
+        cb: res => {
+          this.doSubmit(res);
+        }
+      });
+    } else {
+      this.doSubmit(prompt);
+    }
+  },
+  doSubmit: function(prompt) {
+    if(!prompt.toUpperCase().startsWith("A TOK")) {
+      prompt = "A TOK emoji of " + prompt;
     }
     console.log(prompt);
     const req = {
