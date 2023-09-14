@@ -12,20 +12,10 @@
   },
   "usingComponents": {
     "wux-notice-bar": "/miniprogram_npm/wux-weapp/notice-bar/index",
-    "wux-row": "/miniprogram_npm/wux-weapp/row/index",
-    "wux-col": "/miniprogram_npm/wux-weapp/col/index",
     "wux-icon": "/miniprogram_npm/wux-weapp/icon/index",
-    "wux-cell-group": "/miniprogram_npm/wux-weapp/cell-group/index",
-    "wux-cell": "/miniprogram_npm/wux-weapp/cell/index",
-    "wux-card": "/miniprogram_npm/wux-weapp/card/index",
-    "wux-wing-blank": "/miniprogram_npm/wux-weapp/wing-blank/index",
-    "wux-textarea": "/miniprogram_npm/wux-weapp/textarea/index",
-    "wux-avatar": "/miniprogram_npm/wux-weapp/avatar/index",
-    "wux-select": "/miniprogram_npm/wux-weapp/select/index",
-    "wux-dialog": "/miniprogram_npm/wux-weapp/dialog/index",
-    "wux-upload": "/miniprogram_npm/wux-weapp/upload/index",
     "wux-loading": "/miniprogram_npm/wux-weapp/loading/index"
   },
+  "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
