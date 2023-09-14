@@ -3,7 +3,6 @@
 
 .preview, .sample-group{
     display: flex;
-    /* 主轴行：一行三列 */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -25,8 +24,8 @@
 }
 
 .img-item {
-    width: 60vw;
-    height: 60vw;
+    /* width: 60vw;
+    height: 60vw; */
     margin: 0 10px;
     background-color: #f3f3f3;
     /* border: 1px solid green; */
@@ -92,16 +91,14 @@
   justify-content: flex-end;
 }
 
-#clear-btn {
+#clear-btn, #submit-btn {
   background-color: lightgrey;
   margin: 0 5px;
-  width: 20vw;
+  width: 25vw;
 }
 
 #submit-btn {
   background-color: lightgreen;
-  margin: 0 5px;
-  width: 20vw;
 }
 
 .logs {

@@ -1,14 +1,14 @@
 // 全局变量
-const debug = true;
-const dev = "prod";
+const debug = false;
+const env = "prod";
 const config = {
-  httpDomainProd: "https://wx.zhangjh.me/emoji",
-  httpDomainTest: "https://test.zhangjh.me/emoji",
+  httpDomainProd: "https://wx.zhangjh.me/wx/emoji",
+  httpDomainTest: "https://test.zhangjh.me/wx/emoji",
   commonDomainProd: "https://wx.zhangjh.me/wx",
   commonDomainTest: "https://test.zhangjh.me/wx",
 };
 const global = {
-  domain: debug ? "http://localhost:9000/emoji" : (
+  domain: debug ? "http://localhost:9000/wx/emoji" : (
     env === "prod" ? config.httpDomainProd : config.httpDomainTest
   ),
   commonDomain: debug ? "http://localhost:9000/wx" : (

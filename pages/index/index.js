@@ -9,8 +9,8 @@ Page({
     // 默认展示样例，隐藏图片预览和日志容器
     showStatus: {
       noticeStatus: true,
-      sampleStatus: false,
-      previewStatus: true,
+      sampleStatus: true,
+      previewStatus: false,
       logStatus: false
     },
     tipContent: "",
